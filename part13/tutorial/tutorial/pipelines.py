@@ -6,7 +6,7 @@
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import pymongo
 from scrapy.exceptions import DropItem
-
+import pymysql
 
 class TextPipeline(object):
 
@@ -45,6 +45,3 @@ class MongoPipeline(object):
 
     def close_spider(self, spider):
         self.client.close()
-
-
-
